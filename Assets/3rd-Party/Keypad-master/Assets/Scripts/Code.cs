@@ -1,172 +1,105 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Code : MonoBehaviour
 {
-public GameObject num0;
-    public GameObject num1;
-    public GameObject num2;
-    public GameObject num3;
-    public GameObject num4;
-    public GameObject num5;
-    public GameObject num6;
-    public GameObject num7;
-    public GameObject num8;
-    public GameObject num9;
+    [SerializeField] GameObject num0;
+    [SerializeField] GameObject num1;
+    [SerializeField] GameObject num2;
+    [SerializeField] GameObject num3;
+    [SerializeField] GameObject num4;
+    [SerializeField] GameObject num5;
+    [SerializeField] GameObject num6;
+    [SerializeField] GameObject num7;
+    [SerializeField] GameObject num8;
+    [SerializeField] GameObject num9;
 
-    public GameObject cancle;
-    public GameObject OK;
+    [SerializeField] GameObject cancle;
+    [SerializeField] GameObject OK;
 
-    public GameObject text;
+    [SerializeField] TextMeshProUGUI showText;
 
-   // public string textEnter;
-    public string textError;
-    public string textCorrect;
+    [SerializeField] string textEnter;
+    [SerializeField] string textError;
+    [SerializeField] string textCorrect;
 
-    List<int> cod = new List<int>();
-   
+    [SerializeField] List<int> code = new List<int>(4);
+
+    List<int> inputCode = new List<int>();
+
     int index = 0;
 
     void Start()
     {
-    //  text.GetComponent<Text>().text = textEnter;
+        showText.text = textEnter;
     }
 
     public void Receiver(GameObject go)
     {
         if (go == num0)
-        {
-            addCode(0);
-        }
+            AddCode(0);
         if (go == num1)
-        {
-            addCode(1);
-        }
+            AddCode(1);
         if (go == num2)
-        {
-            addCode(2);
-        }
+            AddCode(2);
         if (go == num3)
-        {
-            addCode(3);
-        }
+            AddCode(3);
         if (go == num4)
-        {
-            addCode(4);
-        }
+            AddCode(4);
         if (go == num5)
-        {
-            addCode(5);
-        }
+            AddCode(5);
         if (go == num6)
-        {
-            addCode(6);
-        }
+            AddCode(6);
         if (go == num7)
-        {
-            addCode(7);
-        }
+            AddCode(7);
         if (go == num8)
-        {
-            addCode(8);
-        }
+            AddCode(8);
         if (go == num9)
-        {
-            addCode(9);
-        }
+            AddCode(9);
         if (go == cancle)
-        {
             Delete();
-        }
         if (go == OK)
-        {
-            Enter(); 
-        }
+            Enter();
     }
 
     // when we enter cancle, delelte the number
     void Delete()
     {
-        cod.Clear();
+        inputCode.Clear();
         index = 0;
-        text.GetComponent<Text>().text = "";
-      
+        showText.text = "";
     }
 
     void Enter()
     {
-        //bool isCorrect;
-        List<int> inputCode = new List<int>() {1,2,3,4};
-        //foreach (var x in inputCode){
-        //    Debug.Log(x);
-        //}
-
-      /*  if (inputCode == cod){
-            //isCorrect = true;
-            text.GetComponent<Text>().text = textCorrect;
-        }
-        else{
-
-            foreach (var num in inputCode)
-            {
-                Debug.Log(num);
-            }
-            //Debug.Log("first");
-            foreach (var num in cod)
-            {
-                Debug.Log(num);
-            }
-            //Debug.Log("second");
-            //Debug.Log(string.Join(",", correct));
-            //Debug.Log(cod);
-
-            //isCorrect = false;
-            text.GetComponent<Text>().text = textError;
-        }*/
-
-
-
-        if(index == inputCode.Count)
+        if (index == code.Count)
         {
             bool isCorrect = true;
-            for (int i = 0; i < inputCode.Count; i++)
-            {
-                if(cod[i]!= inputCode[i])
+            for (int i = 0; i < code.Count; i++)
+                if (inputCode[i] != code[i])
                 {
                     isCorrect = false;
                     break;
                 }
-            }
-            if(isCorrect)
-            {
-                text.GetComponent<Text>().text = textCorrect;
-            }
-            else
-            {
-                text.GetComponent<Text>().text = textError;
-            }
+
+            showText.text = isCorrect ? textCorrect : textError;
         }
         else
         {
-            text.GetComponent<Text>().text = textError;
+            showText.text = textError;
             Delete();
         }
     }
 
-
-    public void  addCode(int num)
+    public void AddCode(int num)
     {
-        cod.Add(num);
-        index++;
-
-      //  text.GetComponent<Text>().text += "";
-
-        //for (int i = 0; i < index; i++)
-        //{
-            text.GetComponent<Text>().text += num;
-        //}
+        if (index < code.Count)
+        {
+            inputCode.Add(num);
+            showText.text += num;
+            index++;
+        }
     }
 
 }
