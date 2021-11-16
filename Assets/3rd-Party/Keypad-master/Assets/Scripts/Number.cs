@@ -12,7 +12,7 @@ public class Number : MonoBehaviour
     }
 #endif
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         keypad.GetComponent<Code>().Receiver(gameObject);
     }

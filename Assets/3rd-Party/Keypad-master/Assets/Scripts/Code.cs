@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Code : MonoBehaviour
 {
@@ -24,7 +25,10 @@ public class Code : MonoBehaviour
     [SerializeField] string textError;
     [SerializeField] string textCorrect;
 
-    [SerializeField] List<int> code = new List<int>(4);
+    [SerializeField] Vector4 code;
+
+    [SerializeField] bool hasOpened = false;
+    [SerializeField] UnityEvent onCorrectCode;
 
     List<int> inputCode = new List<int>();
 
@@ -63,9 +67,12 @@ public class Code : MonoBehaviour
             Enter();
     }
 
-    // when we enter cancle, delelte the number
+    // when we enter cancle, delete the number
     void Delete()
     {
+        if (hasOpened)
+            return;
+
         inputCode.Clear();
         index = 0;
         showText.text = "";
@@ -73,29 +80,43 @@ public class Code : MonoBehaviour
 
     void Enter()
     {
-        if (index == code.Count)
+        if (hasOpened)
+            return;
+
+        if (inputCode.Count == 4)
         {
-            bool isCorrect = true;
-            for (int i = 0; i < code.Count; i++)
-                if (inputCode[i] != code[i])
-                {
-                    isCorrect = false;
-                    break;
-                }
+            bool isCorrect = false;
+            if (inputCode[0] == code.x &&
+                inputCode[1] == code.y &&
+                inputCode[2] == code.z &&
+                inputCode[3] == code.w)
+            {
+                isCorrect = true;
+                hasOpened = true;
+                onCorrectCode.Invoke();
+            }
+            else
+            {
+                Delete();
+                isCorrect = false;
+            }
 
             showText.text = isCorrect ? textCorrect : textError;
-        }
-        else
-        {
-            showText.text = textError;
-            Delete();
+            showText.color = isCorrect ? Color.green : Color.red;
         }
     }
 
     public void AddCode(int num)
     {
-        if (index < code.Count)
+        if (hasOpened)
+            return;
+
+        if (showText.text == textEnter || showText.text == textError)
+            showText.text = "";
+
+        if (index < 4)
         {
+            showText.color = Color.white;
             inputCode.Add(num);
             showText.text += num;
             index++;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 82562921}
   - component: {fileID: 82562920}
   - component: {fileID: 82562923}
+  - component: {fileID: 1146437895}
   m_Layer: 0
   m_Name: Cube3
   m_TagString: Untagged
@@ -91,7 +92,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82562918}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -109,6 +110,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &1146437895
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82562918}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &94200578
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +139,7 @@ GameObject:
   - component: {fileID: 94200581}
   - component: {fileID: 94200580}
   - component: {fileID: 94200583}
+  - component: {fileID: 854985909}
   m_Layer: 0
   m_Name: Cube9
   m_TagString: Untagged
@@ -200,7 +218,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94200578}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -218,6 +236,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &854985909
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94200578}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &130394974
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +265,7 @@ GameObject:
   - component: {fileID: 130394977}
   - component: {fileID: 130394976}
   - component: {fileID: 130394979}
+  - component: {fileID: 38896614}
   m_Layer: 0
   m_Name: Cube7
   m_TagString: Untagged
@@ -309,7 +344,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130394974}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -327,6 +362,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &38896614
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130394974}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &328924087
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +391,7 @@ GameObject:
   - component: {fileID: 328924090}
   - component: {fileID: 328924089}
   - component: {fileID: 328924092}
+  - component: {fileID: 79526146}
   m_Layer: 0
   m_Name: Cube1
   m_TagString: Untagged
@@ -418,7 +470,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328924087}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -436,6 +488,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &79526146
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328924087}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &603758257
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +517,7 @@ GameObject:
   - component: {fileID: 603758260}
   - component: {fileID: 603758259}
   - component: {fileID: 603758262}
+  - component: {fileID: 1919145695}
   m_Layer: 0
   m_Name: Cube6
   m_TagString: Untagged
@@ -527,7 +596,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603758257}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -545,6 +614,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &1919145695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603758257}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &914639134
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +673,7 @@ GameObject:
   - component: {fileID: 1100906440}
   - component: {fileID: 1100906439}
   - component: {fileID: 1100906442}
+  - component: {fileID: 1275547641}
   m_Layer: 0
   m_Name: Cube4
   m_TagString: Untagged
@@ -666,7 +752,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100906437}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -684,6 +770,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &1275547641
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100906437}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1112763414
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +799,7 @@ GameObject:
   - component: {fileID: 1112763417}
   - component: {fileID: 1112763416}
   - component: {fileID: 1112763419}
+  - component: {fileID: 1146243364}
   m_Layer: 0
   m_Name: Cube8
   m_TagString: Untagged
@@ -775,7 +878,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112763414}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -793,6 +896,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &1146243364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112763414}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1651215524
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +1025,7 @@ GameObject:
   - component: {fileID: 1893204439}
   - component: {fileID: 1893204438}
   - component: {fileID: 1893204441}
+  - component: {fileID: 581399662}
   m_Layer: 0
   m_Name: CubeCancle
   m_TagString: Untagged
@@ -984,7 +1104,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893204436}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1002,6 +1122,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &581399662
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893204436}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1954123041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1151,7 @@ GameObject:
   - component: {fileID: 1954123044}
   - component: {fileID: 1954123043}
   - component: {fileID: 1954123046}
+  - component: {fileID: 1722831753}
   m_Layer: 0
   m_Name: Cube2
   m_TagString: Untagged
@@ -1093,7 +1230,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954123041}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1111,6 +1248,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &1722831753
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954123041}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2042033495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1277,7 @@ GameObject:
   - component: {fileID: 2042033498}
   - component: {fileID: 2042033497}
   - component: {fileID: 2042033500}
+  - component: {fileID: 2143356559}
   m_Layer: 0
   m_Name: Cube5
   m_TagString: Untagged
@@ -1202,7 +1356,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042033495}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1220,6 +1374,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &2143356559
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042033495}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2107852021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1403,7 @@ GameObject:
   - component: {fileID: 2107852024}
   - component: {fileID: 2107852023}
   - component: {fileID: 2107852026}
+  - component: {fileID: 131675669}
   m_Layer: 0
   m_Name: Cube0
   m_TagString: Untagged
@@ -1311,7 +1482,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107852021}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1329,6 +1500,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &131675669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107852021}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2145509482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1529,7 @@ GameObject:
   - component: {fileID: 2145509485}
   - component: {fileID: 2145509484}
   - component: {fileID: 2145509487}
+  - component: {fileID: 325085529}
   m_Layer: 0
   m_Name: CubeOK
   m_TagString: Untagged
@@ -1420,7 +1608,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145509482}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1438,6 +1626,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keypad: {fileID: 7654508659251567048}
+--- !u!54 &325085529
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145509482}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3455576675895951538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1804,11 @@ MonoBehaviour:
   textEnter: 
   textError: Error
   textCorrect: Correct
-  code: 01000000020000000300000004000000
+  code: {x: 1, y: 2, z: 3, w: 4}
+  hasOpened: 0
+  onCorrectCode:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7654508659251535722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1670,15 +1878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38ff3e00f63864cb5a3b7d0b19ad3453, type: 3}
---- !u!4 &7654508659251135976 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 38ff3e00f63864cb5a3b7d0b19ad3453,
-    type: 3}
-  m_PrefabInstance: {fileID: 7654508659251535722}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7654508659251567048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 38ff3e00f63864cb5a3b7d0b19ad3453,
+    type: 3}
+  m_PrefabInstance: {fileID: 7654508659251535722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7654508659251135976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 38ff3e00f63864cb5a3b7d0b19ad3453,
     type: 3}
   m_PrefabInstance: {fileID: 7654508659251535722}
   m_PrefabAsset: {fileID: 0}
