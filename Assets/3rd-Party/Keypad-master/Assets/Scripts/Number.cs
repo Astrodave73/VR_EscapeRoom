@@ -1,16 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Number : MonoBehaviour {
-    public GameObject keypad;
+public class Number : MonoBehaviour
+{
+    [SerializeField] GameObject keypad;
     /////// set VR here
-    /// for now mouse click
-   /* private void OnMouseDown()
+
+#if UNITY_EDITOR
+    private void OnMouseDown()
     {
         keypad.GetComponent<Code>().Receiver(gameObject);
-    }*/
-    private void OnCollisionEnter(Collision collision)
+    }
+#endif
+
+    private void OnTriggerEnter(Collider other)
     {
         keypad.GetComponent<Code>().Receiver(gameObject);
     }
