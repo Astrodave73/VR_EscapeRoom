@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/MyScenes/IntroScene.unity
     guid: 5ac0f46b33301d04387c4d0ddd338359
   - enabled: 1
-    path: Assets/MyScenes/VREntrega.unity
+    path: Assets/MyScenes/VREntrega2.unity
     guid: 684887cd8034e184f92d038173c73bdb
   - enabled: 1
     path: Assets/MyScenes/WinScene.unity
