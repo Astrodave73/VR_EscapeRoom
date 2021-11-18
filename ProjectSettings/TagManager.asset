@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
+  - Books
+  - GBook
+  - RBook
+  - BBook
   - MagicBall
+  - Finger
   layers:
   - Default
   - TransparentFX
