@@ -27,6 +27,7 @@ public class BookChecker : MonoBehaviour
         if (greenBook.enabled && redBook.enabled && blueBook)
         {
             StartCoroutine("OpenWinScene");
+
         }
         
         
@@ -52,9 +53,7 @@ public class BookChecker : MonoBehaviour
         
         door.transform.rotation = Quaternion.Slerp(door.transform.rotation,Quaternion.Euler(0,-90,0), Time.deltaTime);
             locker.enabled = false;
-            openDoor.Play();
-       
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             SceneManager.LoadScene("WinScene");
         
 
