@@ -2,18 +2,23 @@
 
 public class Number : MonoBehaviour
 {
-    [SerializeField] GameObject keypad;
-    /////// set VR here
+    Code code;
+
+    private void Awake()
+    {
+        code = GetComponentInParent<Code>();
+    }
 
 #if UNITY_EDITOR
     private void OnMouseDown()
     {
-        keypad.GetComponent<Code>().Receiver(gameObject);
+        code.Receiver(gameObject);
     }
 #endif
 
     private void OnTriggerEnter(Collider other)
     {
-        keypad.GetComponent<Code>().Receiver(gameObject);
+        if (other.CompareTag("Finger"))
+            code.Receiver(gameObject);
     }
 }

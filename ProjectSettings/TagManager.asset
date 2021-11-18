@@ -5,14 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
-<<<<<<< HEAD
-  - Books
-  - GBook
-  - RBook
-  - BBook
-=======
-  - MagicBall
->>>>>>> 024b0233e481d9ef796888c4699d271b590323ee
+  - Finger
   layers:
   - Default
   - TransparentFX
