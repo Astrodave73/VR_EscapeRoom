@@ -18,6 +18,7 @@ public class PuertaScript : MonoBehaviour
 
     [SerializeField] GameObject locker;
     [SerializeField] AudioSource audiosrc;
+    [SerializeField] AudioClip audioclp;
 
 
     private void Awake()
@@ -62,9 +63,13 @@ public class PuertaScript : MonoBehaviour
     IEnumerator OpenDoorB()
     {
         locker.SetActive(false);
+        audiosrc.PlayOneShot(audioclp);
         exitDoor.transform.rotation = Quaternion.Slerp(exitDoor.transform.rotation, Quaternion.Euler(0,- 90f,0), Time.deltaTime);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("WinScene");
+        RBook.enabled = false;
+        GBook.enabled = false;
+        BBook.enabled = false;
     }
         
 }

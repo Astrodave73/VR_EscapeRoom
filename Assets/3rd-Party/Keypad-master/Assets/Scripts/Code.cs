@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Code : MonoBehaviour
 {
@@ -18,12 +19,17 @@ public class Code : MonoBehaviour
 
     [SerializeField] GameObject cancle;
     [SerializeField] GameObject OK;
+    [SerializeField] GameObject safeLock;
+
+    [SerializeField] AudioSource asrc;
+    [SerializeField] AudioClip clip;
 
     [SerializeField] TextMeshProUGUI showText;
 
     [SerializeField] string textEnter;
     [SerializeField] string textError;
     [SerializeField] string textCorrect;
+    
 
     [SerializeField] Vector4 code;
 
@@ -93,7 +99,10 @@ public class Code : MonoBehaviour
             {
                 isCorrect = true;
                 hasOpened = true;
+                asrc.PlayOneShot(clip);
                 onCorrectCode.Invoke();
+                safeLock.SetActive(false);
+            
             }
             else
             {
