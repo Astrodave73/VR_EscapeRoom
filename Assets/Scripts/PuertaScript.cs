@@ -11,11 +11,21 @@ public class PuertaScript : MonoBehaviour
     [SerializeField] Image BBook;
 
     [SerializeField] GameObject exitDoor;
+
+    [SerializeField] GameObject greenbook;
+    [SerializeField] GameObject redbook;
+    [SerializeField] GameObject bluebook;
+
     [SerializeField] GameObject locker;
     [SerializeField] AudioSource audiosrc;
 
 
-
+    private void Awake()
+    {
+        GBook.enabled = false;
+        RBook.enabled = false;
+        BBook.enabled = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +36,35 @@ public class PuertaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(GBook.enabled && RBook.enabled && BBook.enabled)
+        {
+            StartCoroutine("OpenDoorB");
+        }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject. CompareTag("GBook"))
+        {
+            GBook.enabled = true;
+          
+        }
+        if (other.gameObject.CompareTag("RBook"))
+        {
+            RBook.enabled = true; 
+        }
+        if (other.gameObject.CompareTag("BBook"))
+        {
+            BBook.enabled = true;
+        }
+    }
+
+    IEnumerator OpenDoorB()
+    {
+        locker.SetActive(false);
+        exitDoor.transform.rotation = Quaternion.Slerp(exitDoor.transform.rotation, Quaternion.Euler(0,- 90f,0), Time.deltaTime);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("WinScene");
+    }
+        
 }
