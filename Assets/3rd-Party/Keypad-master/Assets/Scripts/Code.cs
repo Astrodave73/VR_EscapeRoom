@@ -23,6 +23,8 @@ public class Code : MonoBehaviour
 
     [SerializeField] AudioSource asrc;
     [SerializeField] AudioClip clip;
+    [SerializeField] AudioClip tecla;
+    [SerializeField] AudioClip puertaAbierta;
 
     [SerializeField] TextMeshProUGUI showText;
 
@@ -99,7 +101,8 @@ public class Code : MonoBehaviour
             {
                 isCorrect = true;
                 hasOpened = true;
-                asrc.PlayOneShot(clip);
+                asrc.PlayOneShot(clip,1);
+                asrc.PlayOneShot(puertaAbierta);
                 onCorrectCode.Invoke();
                 safeLock.SetActive(false);
             
@@ -125,6 +128,7 @@ public class Code : MonoBehaviour
 
         if (index < 4)
         {
+            asrc.PlayOneShot(tecla);
             showText.color = Color.white;
             inputCode.Add(num);
             showText.text += num;

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
-    //public AudioSource audioGlass;
+    public AudioSource audioGlass;
+    public AudioClip glass;
 
     
 
@@ -15,7 +16,7 @@ public class Destructible : MonoBehaviour
         {
 
             Instantiate(destroyedVersion, transform.position, transform.rotation);
-           // audioGlass.Play();
+            audioGlass.PlayOneShot(glass);
             Destroy(gameObject);
         }
 
