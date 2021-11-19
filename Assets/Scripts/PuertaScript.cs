@@ -19,6 +19,7 @@ public class PuertaScript : MonoBehaviour
     [SerializeField] GameObject locker;
     [SerializeField] AudioSource audiosrc;
     [SerializeField] AudioClip audioclp;
+    [SerializeField] AudioClip bookChecker;
 
 
     private void Awake()
@@ -48,15 +49,18 @@ public class PuertaScript : MonoBehaviour
         if (other.gameObject. CompareTag("GBook"))
         {
             GBook.enabled = true;
+            audiosrc.PlayOneShot(bookChecker);
           
         }
         if (other.gameObject.CompareTag("RBook"))
         {
-            RBook.enabled = true; 
+            RBook.enabled = true;
+            audiosrc.PlayOneShot(bookChecker);
         }
         if (other.gameObject.CompareTag("BBook"))
         {
             BBook.enabled = true;
+            audiosrc.PlayOneShot(bookChecker);
         }
     }
 
