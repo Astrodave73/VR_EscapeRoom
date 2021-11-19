@@ -3,7 +3,7 @@
 public class Number : MonoBehaviour
 {
     Code code;
-
+    bool isPressed = false;
     private void Awake()
     {
         code = GetComponentInParent<Code>();
@@ -18,7 +18,19 @@ public class Number : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isPressed)
+            return;
+
         if (other.CompareTag("Finger"))
+        {
+            isPressed = true;
             code.Receiver(gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Finger"))
+            isPressed = false;
     }
 }
