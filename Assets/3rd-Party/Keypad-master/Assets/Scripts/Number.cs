@@ -4,6 +4,7 @@ public class Number : MonoBehaviour
 {
     Code code;
     bool isPressed = false;
+
     private void Awake()
     {
         code = GetComponentInParent<Code>();
@@ -12,6 +13,7 @@ public class Number : MonoBehaviour
 #if UNITY_EDITOR
     private void OnMouseDown()
     {
+        print("Clicked");
         code.Receiver(gameObject);
     }
 #endif
