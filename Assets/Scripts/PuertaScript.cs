@@ -76,7 +76,7 @@ public class PuertaScript : MonoBehaviour
         }
         exitDoor.transform.rotation = Quaternion.Slerp(exitDoor.transform.rotation, Quaternion.Euler(0,- 90f,0), Time.deltaTime);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("WinScene");
+        SceneManager.LoadScene("VREntrega");
         RBook.enabled = false;
         GBook.enabled = false;
         BBook.enabled = false;
