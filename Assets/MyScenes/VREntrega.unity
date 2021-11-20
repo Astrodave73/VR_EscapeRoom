@@ -2688,6 +2688,11 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5847812941215691952, guid: 21a9b655c2d703344abc684145092a05,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3199997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a9b655c2d703344abc684145092a05, type: 3}
 --- !u!4 &1178220718 stripped
@@ -3930,7 +3935,7 @@ PrefabInstance:
     - target: {fileID: 3203136990967121232, guid: ee5a373da72e43544b192c6786b5816e,
         type: 3}
       propertyPath: MinDistance
-      value: 3.7135072
+      value: 6.3509717
       objectReference: {fileID: 0}
     - target: {fileID: 4487583643331672429, guid: ee5a373da72e43544b192c6786b5816e,
         type: 3}

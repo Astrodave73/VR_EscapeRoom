@@ -21,6 +21,8 @@ public class PuertaScript : MonoBehaviour
     [SerializeField] AudioClip audioclp;
     [SerializeField] AudioClip bookChecker;
 
+    bool hasSound;
+
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class PuertaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasSound = false;
     }
 
     // Update is called once per frame
@@ -67,7 +69,11 @@ public class PuertaScript : MonoBehaviour
     IEnumerator OpenDoorB()
     {
         locker.SetActive(false);
-        audiosrc.PlayOneShot(audioclp);
+        if (!hasSound)
+        {
+            audiosrc.PlayOneShot(audioclp);
+            hasSound = true;
+        }
         exitDoor.transform.rotation = Quaternion.Slerp(exitDoor.transform.rotation, Quaternion.Euler(0,- 90f,0), Time.deltaTime);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("WinScene");
